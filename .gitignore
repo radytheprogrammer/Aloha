@@ -1,8 +1,12 @@
 __MACOSX/
-#ignore specific images
+
+#ignore project images and final outcome
 expectations/
 footer.bmp
 navigation.bmp
+
+#ignore assets
+assets/
 
 # Ignore system files
 .DS_Store
@@ -16,7 +20,6 @@ ehthumbs.db
 .git
 .vscode
 
-
-# Ignore 
+# Ignore any local machine instalations like npm/yarn/sass because we haven't learned this yet (shh!)
 npm packages
 node_modules/

@@ -1,0 +1,23 @@
+{
+  "name": "project-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radytheprogrammer/Aloha.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radytheprogrammer/Aloha/issues"
+  },
+  "homepage": "https://github.com/radytheprogrammer/Aloha#readme",
+  "dependencies": {
+    "flickity": "^2.2.1"
+  },
+  "devDependencies": {}
+}
