@@ -1,27 +1,24 @@
-console.log("Hello from main.js");
+// (function($){
+//   // ensure the DOM loaded sucessfully
+//   $(document).ready(function(){
+//       // target the flickity container
 
-    const nameEl = document.getElementById('name');
+//   });
 
-    document.addEventListener("DOMContentLoaded", function(event) {
-        
-        const subcribeButtonElement = document.getElementById("subscribe")
-        // subscribeButtonElement.addEventListener
-        // onclick
-        // alert()
+// })(jQuery)
 
-    })
+// $('.main-carousel').flickity();
 
-    var elem = document.querySelector('.main-carousel');
-    var flkty = new Flickity( elem, {
-        // options
-        cellAlign: 'left',
-        contain: true
-    });
+document.addEventListener("DOMContentLoaded", function () {
 
-    // element argument can be a selector string
-    //   for an individual element
-    var flkty = new Flickity( '.main-carousel', {
-    // options
-    });
+      console.log('Your document is ready, DOM loaded and is ready for manipulation.');
 
-    
+      var elem = document.querySelector('.main-carousel');
+      
+      var flkty = new Flickity(elem, {
+          // options
+          cellAlign: 'left',
+          contain: true
+      });
+  
+});

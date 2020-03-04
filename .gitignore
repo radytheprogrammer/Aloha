@@ -1,16 +1,15 @@
 __MACOSX/
 
 #ignore project images and final outcome
-expectations/
 footer.bmp
 navigation.bmp
+grid.html
 
 #ignore assets
 assets/
 
 # Ignore system files
 .DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
@@ -20,6 +19,7 @@ ehthumbs.db
 .git
 .vscode
 
-# Ignore any local machine instalations like npm/yarn/sass because we haven't learned this yet (shh!)
+
+# Ignore any local machine instalations like npm, which uses node and yarn, who also might be based on node or some js library inside node_modules
 npm packages
 node_modules/
