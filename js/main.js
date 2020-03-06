@@ -1,7 +1,9 @@
 // (function($){
 //   // ensure the DOM loaded sucessfully
 //   $(document).ready(function(){
-//       // target the flickity container
+//       // target the flickity container with querySelector
+
+
 
 //   });
 
@@ -21,4 +23,46 @@ document.addEventListener("DOMContentLoaded", function () {
           contain: true
       });
   
+});
+
+
+
+/* https://www.w3resource.com */
+
+function validateEmail(mail) {
+	console.log("i am validating bro");
+	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+	{
+      //return(true);
+      	 event.preventDefault();
+      alert("Thank you for subscribing!");
+
+    }
+    else{
+      //return(false);
+      			 event.preventDefault();
+            alert("You have entered an invalid email address!");
+    }
+
+}
+
+
+
+
+const subscribeButton = document.getElementById("subscribe");
+console.log(subscribeButton);
+
+subscribeButton.addEventListener("click", function(){
+
+
+	const inputEmail = document.getElementById("email");
+console.log(inputEmail);
+
+
+
+let emailVal = inputEmail.value;
+
+	validateEmail(emailVal);
+	inputEmail.value='';
+
 });

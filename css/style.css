@@ -1,6 +1,6 @@
 @font-face {
 
-    font-family: 'Raleway-Light';    
+    font-family: 'Raleway-Light';
     src: url('../fonts/Raleway-Light.eot'),
         url('../fonts/Raleway-Light.woff2') format('woff2'),
         url('../fonts/Raleway-Light.woff') format('woff'),
@@ -112,9 +112,9 @@ header {
 
 .menu-container {
     display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-height:30vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height:30vw;
 }
 
 
@@ -129,7 +129,7 @@ height:30vw;
 .cart{
     width: 49px;
     height: 50px;
-    order: 2;   
+    order: 2;
 }
 
 nav{
@@ -203,10 +203,10 @@ gray solid;
                                 rgba(0, 0, 0, 0.25) ),
                 url("../images/banner-girl.png"), /* first foreground image, appears first, foremost*/
                 url("../images/flower-bkgd.jpg"); /* second background image*/ /* first image, second image */
-    
-                background-position: center,center,center;
-                background-repeat: repeat, no-repeat, repeat;
-    background-size: cover,contain,cover; /* don't know how to explain this -_- this is the background size of the above mentioned items, respectively*/ 
+
+    background-position: center,center,center;
+    background-repeat: repeat, no-repeat, repeat;
+    background-size: cover,contain,cover; /* don't know how to explain this -_- this is the background size of the above mentioned items, respectively*/
     height: 100vw;
     width: 100vw;
 }
@@ -217,7 +217,7 @@ gray solid;
     color: white;
     font-family: "Raleway-Light";
     text-shadow: 0.5px 0.5px 0.5px #d7d7d7;
-}     
+}
 
 .hero-banner h1{
     font-size: 2em; /* browser */
@@ -241,7 +241,7 @@ gray solid;
 nav li a{
     text-decoration: none;
     color: #e2574c;
-}   
+}
 
 #about{
     box-sizing:border-box;
@@ -285,7 +285,7 @@ strong{
 } */
 
 .grid-container{
-    
+
     /*do your grid gaps (row/column) here */
 }
 
@@ -354,7 +354,7 @@ strong{
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    
+
     background: url("../images/bags-category.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -467,9 +467,6 @@ footer{
 .address-wrapper .icons{
 }
 
-/* mobile view */
-
-
 
 /* tablet view breakpoint at 600px and up */
 @media screen and (min-width: 600px) {
@@ -481,7 +478,7 @@ footer{
         margin: 0 auto;
         /* width: 100%; */
     }
-    
+
     header{
         position: fixed;
         background: #ffffff;
@@ -489,11 +486,11 @@ footer{
         border: blue solid;
         /* width: 100%;  */
     }
-    
+
     .menu-container{
         background: cyan;
     }
-    
+
     .menu-container .logo{
         order: 1;
     }
@@ -504,7 +501,7 @@ footer{
     .menu-container .cart{
         order: 3;
     }
-    
+
     /* 400x155*/
     .logo{
         width: 100px;
@@ -523,20 +520,20 @@ footer{
         font-size: 14px;
         order: 2;
     }
-    
+
     .cart{
         width: 50px;
         height: 48px;
         border: gold solid;
         order: 3;
     }
-    
-    
+
+
     hr{
         width: 5px;
         color: greenyellow;
     }
-    
+
     /* ul */
     .nav-items{
         font-size: 16px;
@@ -546,8 +543,8 @@ footer{
         color: #e2574c;
         width: 60%;
         order: 2;
-    } 
-    
+    }
+
     .nav-items li{
         border: 2px greenyellow solid;
         font-size: 20px;
@@ -566,10 +563,10 @@ footer{
                                     rgba(0, 0, 0, 0.75)),
         url("../images/banner-girl.png"), /* first foreground image, appears first, foremost*/
         url("../images/flower-bkgd.jpg"); /* second background image*/ /* first image, second image */
-        
+
         background-position: left, bottom, center;
         background-repeat: repeat, no-repeat, repeat;
-        background-size: cover,contain,cover; /* don't know how to explain this -_- this is the background size of the above mentioned items, respectively*/ 
+        background-size: cover,contain,cover; /* don't know how to explain this -_- this is the background size of the above mentioned items, respectively*/
         height: 75vh;
         width: 100%;
     }
@@ -596,7 +593,7 @@ background-color: grey;
     .d1 {
         /* developer: your task is to make this take up two cols on the first row */
         grid-column: 1 / span 2;
-        grid-row: 1 / span 2; /* start from top and span 2 rows */      
+        grid-row: 1 / span 2; /* start from top and span 2 rows */
         /* background: url("../images/mens-category.jpg"); */
         background-color: crimson;
         background: url('../images/mens-category.jpg');
@@ -647,7 +644,7 @@ background-color: grey;
         height: 50px;
         margin-right: 10px;
     }
-  
+
 
 }
 
