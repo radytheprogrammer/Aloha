@@ -2,13 +2,8 @@
 //   // ensure the DOM loaded sucessfully
 //   $(document).ready(function(){
 //       // target the flickity container with querySelector
-
-
-
 //   });
-
 // })(jQuery)
-
 // $('.main-carousel').flickity();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -18,9 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
       var elem = document.querySelector('.main-carousel');
       
       var flkty = new Flickity(elem, {
-          // options
-          cellAlign: 'left',
-          contain: true
+        wrapAround: true,
+        adaptiveHeight:false,
+        cellAlign: 'left',
+        contain: true
       });
   
 });
