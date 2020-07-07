@@ -163,8 +163,8 @@ strong{
 } */
 
 .grid-container{
-
     /*do your grid gaps (row/column) here */
+    padding: 10px;
 }
 
 #shop{
@@ -264,6 +264,7 @@ strong{
 }
 
 .products h2{
+    text-align: center;
 
 }
 
@@ -275,6 +276,20 @@ strong{
 
 .products strong{
     font-family: 'Raleway-Light';
+}
+
+.updates{
+background-image: url("../images/wave-bkgd.jpg");
+background-size: cover;
+height: 45vh;
+font-size: xx-large;
+background-repeat: no-repeat;
+}
+
+.updates h2{
+    font-family: 'PlayfairDisplay-BoldItalic';
+    font-style: italic;
+    text-align: center; 
 }
 
 .flickity-button{
@@ -309,9 +324,7 @@ footer{
     align-items: center;
     color: azure;
     background-color: #242424;
-    height: 300px;
-    background-image: url("../images/wave-bkgd.jpg");
-    background-size: cover;
+    height: 15em;
 }
 
 .address-wrapper{
