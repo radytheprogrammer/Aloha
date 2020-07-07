@@ -96,7 +96,7 @@
 /* Design: The body font family is Raleway Light */
 body {
     scroll-behavior: smooth;
-    font-size: 14px; /* mobile base font size is 14px as per design specs*/
+    font-size: 14px; /* mobile base font size is 14px as per requirements*/
     margin: 0 auto;
     font-family: 'Raleway Light';
     background: white;
@@ -114,55 +114,39 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height:30vw;
+    height: 25vw; /* vertical width or height */
 }
 
 
-/* 400x155 */
+/* Original picture size 400x155. 1/3 of the screen */
 .logo{
-    width: 100px;
-    height: 50px;
-    margin-left: 0.5em;
-    order: 1;
+    width: 33%;
+    height: 82px;
 }
 
 .cart{
-    width: 49px;
-    height: 50px;
+    width: 62px;
+    height: 58px;
+    padding: 10px;
     order: 2;
 }
 
 nav{
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center;
-    font-family: 'Raleway-Light';
-    color: #e2574c;
-    background: white;
     order: 3;
+    width: 100%;
 }
 
 .nav-items{
     display: flex;
-    justify-content: flex-start;
-
-
-
-    width: 100%;
-
-height: 3em;
-
-box-sizing: border-box;
-
-border-top: 1px
-gray solid;
+    justify-content: space-around;
+    font-family: 'Raleway-Light', sans-serif;
+    box-sizing: border-box;
+    border-top: 0.5em;
+    height: 3em;
 }
 
 .nav-items li{
     text-decoration-line: none;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
 }
 
 
@@ -187,28 +171,25 @@ gray solid;
 } */
 
 /*
-    1400 x 905 for the flower background
-    If we do not set a height, what will be the default height?
+    Used to seperate different section, 
+    for example header/navigation from banner
 */
-.dummy-placeholder{
+.placeholder{
     height:30vw;
 }
 
 .hero-banner{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    color: white;
-    background: linear-gradient(rgba(0, 0, 0, 0.75),
-                                rgba(0, 0, 0, 0.25) ),
-                url("../images/banner-girl.png"), /* first foreground image, appears first, foremost*/
-                url("../images/flower-bkgd.jpg"); /* second background image*/ /* first image, second image */
-
-    background-position: center,center,center;
+    justify-content: flex-start;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url("../images/banner-girl.png"), url("../images/flower-bkgd.jpg");
+    background-position-x: 0%, 0%, 0%;
+    background-position-y: 0%, 0%, 0%;
     background-repeat: repeat, no-repeat, repeat;
-    background-size: cover,contain,cover; /* don't know how to explain this -_- this is the background size of the above mentioned items, respectively*/
-    height: 100vw;
-    width: 100vw;
+    background-size: 332px 100px;
+    background-position: center,center,center;
+    background-size: cover, 25vh 61vh,cover;
+    height: 61vh;
 }
 
 .hero-banner h3{
@@ -224,14 +205,6 @@ gray solid;
     font-family: "Playfair Display", serif;
     text-align: center;
     text-shadow: 2px 2px 4px grey;
-}
-
-/* ul and li children*/
-.nav-items{
-    display: flex;
-    justify-content: space-around;
-    /* font-family: 'Raleway-Light'; */
-    /* font-family: 'Playfair Display'; */
 }
 
 .nav-items li{
@@ -432,6 +405,8 @@ footer{
     color: azure;
     background-color: #242424;
     height: 300px;
+    background-image: url("../images/wave-bkgd.jpg");
+    background-size: cover;
 }
 
 .address-wrapper{
@@ -463,10 +438,6 @@ footer{
 .address-wrapper :nth-child(4){
     justify-items: center;
 }
-
-.address-wrapper .icons{
-}
-
 
 /* tablet view breakpoint at 600px and up */
 @media screen and (min-width: 600px) {
@@ -684,15 +655,8 @@ background-color: grey;
 @media screen and (min-width: 1240px) {
     background: gold;
 }
-/* mobile styles can be more specific and that would be the reason why nothing is changing
-Reason: css is more spcific, read up on spcificity.
-If nothing is appearing, the reason is that the css is overwritting the desktop version or tablet view.
-
-/* EXAMPLES
-
-body {
-  background-image: url("./path/img_tree.gif"), url("../images/paper.gif");
-  background-color: #cccccc;
-}
-
+/* 
+    What is the reason why nothing is changing?
+    Reason: css is more spcific, read up on specificity.
+    If nothing is appearing, the reason is that the css is overwritting the desktop version or tablet view.
 */
