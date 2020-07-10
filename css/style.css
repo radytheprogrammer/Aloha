@@ -1,3 +1,52 @@
+/* HEADINGS FONT FAMILY IS PLAYFAIR DISPLAY */
+@font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    src: url('PlayfairDisplay-Regular.eot');
+    src: url('PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('PlayfairDisplay-Regular.woff') format('woff'),
+        url('PlayfairDisplay-Regular.ttf') format('truetype'),
+        url('PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Bold';
+    src: url('PlayfairDisplay-Bold.eot');
+    src: url('PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('PlayfairDisplay-Bold.woff') format('woff'),
+        url('PlayfairDisplay-Bold.ttf') format('truetype'),
+        url('PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-BoldItalic';
+    src: url('PlayfairDisplay-BoldItalic.eot');
+    src: url('PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+        url('PlayfairDisplay-BoldItalic.woff') format('woff'),
+        url('PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+        url('PlayfairDisplay-BoldItalic.svg#PlayfairDisplay-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('PlayfairDisplay-Italic.eot');
+    src: url('PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('PlayfairDisplay-Italic.woff') format('woff'),
+        url('PlayfairDisplay-Italic.ttf') format('truetype'),
+        url('PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     scroll-behavior: smooth;
     font-size: 14px; /* mobile base font size is 14px as per requirements*/
@@ -15,14 +64,13 @@ header {
 }
 
 .menu-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 25vw; /* vertical width or height */
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+margin-bottom: 0px;
+padding: 0px;
 }
 
-
-/* Original picture size 400x155. 1/3 of the screen */
 .logo{
     width: 33%;
     height: 82px;
@@ -36,18 +84,19 @@ header {
 }
 
 nav{
-order: 3;
-width: 100%;
-height: 2.5em;
+    order: 3;
+    width: 100%;
 }
 
 .nav-items{
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Raleway-Light', sans-serif;
-    box-sizing: border-box;
-    border-top: 0.5em;
-    height: 3em;
+display: flex;
+justify-content: space-around;
+font-family: 'Raleway-Light', sans-serif;
+border-style: solid;
+border-top-color: #8080807a;
+border-top-width: 0.2em;
+padding: 10px;
+font-weight: inherit;
 }
 
 .nav-items li{
@@ -69,40 +118,35 @@ height: 2.5em;
     order: 4;
 }
 
-/* ht-ow do I make this take up the whole width */
-/* nav{
-    fonfamily: 'Playfair-Display';
-    background-color: white;
-} */
-
 /*
-    Used to seperate different section, 
-    for example header/navigation from banner
+    I added this in to create space between sections.
+    Could not find another way to keep background image from overlaping
 */
 .placeholder{
-    height:18vw;
+    /*height: 8em;*/
 }
 
-.hero-banner{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)), url("../images/banner-girl.png"), url("../images/flower-bkgd.jpg");
-    background-position-x: 0%, 0%, 0%;
-    background-position-y: 0%, 0%, 0%;
-    background-repeat: repeat, no-repeat, repeat;
-    background-size: 332px 100px;
-    background-position: center,center,center;
-    background-size: cover, 25vh 61vh,cover;
-    height: 80vh;
+.hero-banner {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: url("../images/banner-girl.png"), url("../images/flower-bkgd.jpg");
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-repeat: repeat, repeat;
+    background-size: auto, auto;
+background-repeat: no-repeat, no-repeat;
+background-position: bottom,center;
+background-size: 18vh,95vh,47vh,6vh;
+height: 61vh;
 }
 
 .hero-banner h3{
-    text-align: center;
-    font-size: 2.5em;
-    color: white;
-    font-family: "Raleway-Light";
-    text-shadow: 0.5px 0.5px 0.5px #d7d7d7;
+text-align: center;
+font-size: 2.5em;
+color: white;
+font-family: "./fonts/PlayfairDisplay-Bold";
+text-shadow: 1.5px 3.5px 4.5px #8deb1d;
 }
 
 .hero-banner h1{
@@ -122,18 +166,19 @@ nav li a{
 }
 
 #about{
-    box-sizing:border-box;
+    box-sizing: border-box;
+    font-family: 'PlayfairDisplay-Italic';
     padding: 3em 1em;
 }
 
 #about h2{
-    text-align:center;
-    font-size:1.33rem;
+    text-align: center;
+    font-size: 2rem;
     margin-bottom: 1em;
 }
 
-#about em{
-    font-family: 'PlayfairDisplay-Italic';
+#about h2 em{
+    
 }
 
 #about h2 strong{
@@ -279,17 +324,21 @@ strong{
 }
 
 .updates{
-background-image: url("../images/wave-bkgd.jpg");
-background-size: cover;
-height: 45vh;
-font-size: xx-large;
-background-repeat: no-repeat;
+    background-image: url("../images/wave-bkgd.jpg");
+    background-size: cover;
+    height: 45vh;
+    font-size: xx-large;
+    background-repeat: no-repeat;
+    text-align: center; 
 }
 
-.updates h2{
+.updates h2 em{
     font-family: 'PlayfairDisplay-BoldItalic';
     font-style: italic;
-    text-align: center; 
+}
+
+.updates h2 strong{
+    font-family: 'PlayfairDisplay-Bold';
 }
 
 .flickity-button{
@@ -359,126 +408,14 @@ footer{
 
 /* tablet view breakpoint at 600px and up */
 @media screen and (min-width: 600px) {
-
     body{
-        background: skyblue;
-        background-color: white; /* ask why specificity not working */
-        font-size: 16px; /* mobile base font size is 14px */
-        margin: 0 auto;
-        /* width: 100%; */
+    	font-size: 16px;
+        max-width: 1240px;
+		grid-column-gap: 0.5em;
+  		grid-row-gap: 0.5em;
     }
 
-    header{
-        position: fixed;
-        background: #ffffff;
-        z-index: 999;
-        border: blue solid;
-        /* width: 100%;  */
-    }
-
-    .menu-container{
-        background: cyan;
-    }
-
-    .menu-container .logo{
-        order: 1;
-    }
-
-    .menu-container nav{
-        order: 2;
-    }
-    .menu-container .cart{
-        order: 3;
-    }
-
-    /* 400x155*/
-    .logo{
-        width: 100px;
-        height: 50px;
-        margin-left: 0.5em;
-        order: 1;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        font-family: 'Raleway-Light';
-        color:#e2574c;
-        background:white;
-        font-size: 14px;
-        order: 2;
-    }
-
-    .cart{
-        width: 50px;
-        height: 48px;
-        border: gold solid;
-        order: 3;
-    }
-
-
-    hr{
-        width: 5px;
-        color: greenyellow;
-    }
-
-    /* ul */
-    .nav-items{
-        font-size: 16px;
-        font-family: 'Raleway-Light';
-        display: flex;
-        justify-content: space-around;
-        color: #e2574c;
-        width: 60%;
-        order: 2;
-    }
-
-    .nav-items li{
-        border: 2px greenyellow solid;
-        font-size: 20px;
-        font-size: larger;
-        font-weight: bold;
-    }
-
-    .hero-banner{
-        /* height: 100vh; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background: linear-gradient(rgba(255, 0, 0, 0.25),
-                                    rgba(0, 0, 0, 0.75)),
-        url("../images/banner-girl.png"), /* first foreground image, appears first, foremost*/
-        url("../images/flower-bkgd.jpg"); /* second background image*/ /* first image, second image */
-
-        background-position: left, bottom, center;
-        background-repeat: repeat, no-repeat, repeat;
-        background-size: cover,contain,cover; /* don't know how to explain this -_- this is the background size of the above mentioned items, respectively*/
-        height: 75vh;
-        width: 100%;
-    }
-
-    .grid-container {
-display: grid;
-    /* tablet view starts at 600px, 600 / 4 and stretches to 1240px, 1240 / 4 */
-    /* grid-template-columns: 300px 300px 300px; */
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 235px 238px 200px;
-min-width: 600px;
-min-height: 100px;
-background-color: grey;
-/*   width: 1240px;  */
-		/* width: 100%; */
-/*         height: 1200px; */
-	/* height: 100%; */
-/* image height / 2 the height here is smaller than the native resolution of image */
-		grid-column-gap: 10px;
-  		grid-row-gap: 15px;
-    }
-
-    /* MEN's 1240x620 */
+    /* MENS */
     .d1 {
         /* developer: your task is to make this take up two cols on the first row */
         grid-column: 1 / span 2;
@@ -527,54 +464,21 @@ background-color: grey;
         background-size: 100%;
     }
 
-
     .carousel-cell {
         width: 25%; /* half-width */
         height: 50px;
         margin-right: 10px;
     }
-
-
 }
-
-/* Desktop Breakpoint 1240px and up to stretched desktop */
-@media screen and (min-width: 800px){
-    body{
-        background: turquoise;
-    }
-
-    header{
-        position: fixed;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        background: #ffffff;
-        width: 100%;
-    }
-
-    .menu-container{
-        background: silver;
-    }
-
-    nav{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .nav-items{
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
-/* mobile view */
+   
+/* Desktop Breakpoint */
 @media screen and (min-width: 1240px) {
-    background: gold;
+    background-color: gold;
 }
+
 /* 
-    What is the reason why nothing is changing?
+    Questions and problems I ran into:
+    What is the reason why nothing is changing? Why does my font-family not change? Why does it not appear as a drop-down list option
     Reason: css is more spcific, read up on specificity.
     If nothing is appearing, the reason is that the css is overwritting the desktop version or tablet view.
 */

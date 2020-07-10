@@ -23,3 +23,6 @@ ehthumbs.db
 # Ignore any local machine instalations like npm, which uses node and yarn, who also might be based on node or some js library inside node_modules
 npm packages
 node_modules/
+
+# ignore started code zip folder
+aloha project1 font-family.zip
