@@ -1,6 +1,54 @@
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url('Raleway-Light.eot');
+    src: url('Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-Light.woff2') format('woff2'),
+        url('Raleway-Light.woff') format('woff'),
+        url('Raleway-Light.ttf') format('truetype'),
+        url('Raleway-Light.svg#Raleway-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-Medium';
+    src: url('../fonts/Raleway-Medium.eot');
+    src: url('../fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../fonts/Raleway-Medium.woff') format('woff'),
+        url('../fonts/Raleway-Medium.ttf') format('truetype'),
+        url('../fonts/Raleway-Medium.svg#Raleway-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway-LightItalic';
+    src: url('Raleway-LightItalic.eot');
+    src: url('Raleway-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-LightItalic.woff2') format('woff2'),
+        url('Raleway-LightItalic.woff') format('woff'),
+        url('Raleway-LightItalic.ttf') format('truetype'),
+        url('Raleway-LightItalic.svg#Raleway-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway-MediumItalic';
+    src: url('Raleway-MediumItalic.eot');
+    src: url('Raleway-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Raleway-MediumItalic.woff2') format('woff2'),
+        url('Raleway-MediumItalic.woff') format('woff'),
+        url('Raleway-MediumItalic.ttf') format('truetype'),
+        url('Raleway-MediumItalic.svg#Raleway-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
 /* HEADINGS FONT FAMILY IS PLAYFAIR DISPLAY */
 @font-face {
-    font-family: 'PlayfairDisplay-Regular';
+    font-family: 'PlayfairDisplay';
     src: url('PlayfairDisplay-Regular.eot');
     src: url('PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
         url('PlayfairDisplay-Regular.woff2') format('woff2'),
@@ -51,9 +99,11 @@ body {
     scroll-behavior: smooth;
     font-size: 14px; /* mobile base font size is 14px as per requirements*/
     margin: 0 auto;
-    font-family: 'Raleway Light'; /* Specs: The body font family is Raleway Light */
+    font-family: 'Raleway-Light'; /* Specs: The body font family is Raleway Light */
     background: white;
     font: #2d2d2d;
+    bottom: red solid 10em; /* new code July 15 */
+    top: lightgreen dashed 5em; /* new July 15 */
 }
 
 header {
@@ -64,47 +114,60 @@ header {
 }
 
 .menu-container {
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-margin-bottom: 0px;
-padding: 0px;
+    /*display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;*/
 }
 
-.logo{
+.logo {
     width: 33%;
     height: 82px;
+    padding: 0px 10px;
 }
 
-.cart{
-    width: 62px;
-    height: 58px;
-    padding: 10px;
-    order: 2;
+.cart {
+    width: 5em;
+    height: 4.5em;
+    padding: 10px 10px;
 }
 
-nav{
-    order: 3;
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    font-size: 14px;
     width: 100%;
 }
 
-.nav-items{
-display: flex;
-justify-content: space-around;
-font-family: 'Raleway-Light', sans-serif;
-border-style: solid;
-border-top-color: #8080807a;
-border-top-width: 0.2em;
-padding: 10px;
-font-weight: inherit;
+nav ul li {
+    padding: 0px 10px;   
 }
 
-.nav-items li{
+a:link {
+    color: lightgreen;
+}
+
+a:visited {
+    color: #e2574c;
+}
+
+.nav-items {
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Raleway-Light', sans-serif;
+        border-style: solid;
+        border-top-color: #8080807a;
+        border-top-width: 0.2em;
+        padding: 10px;
+        font-weight: inherit;
+}
+
+.nav-items li {
     text-decoration-line: none;
+    padding: 0px 15px;
 }
 
-
-.cart-container{
+.cart-container {
     display: flex;
     width: 55px;
     height: 55px;
@@ -113,7 +176,7 @@ font-weight: inherit;
     order: 3;
 }
 
-.horizontal-line{
+.horizontal-line {
     height: 15px;
     order: 4;
 }
@@ -126,37 +189,35 @@ font-weight: inherit;
     /*height: 8em;*/
 }
 
+/* MOBILE FIRST CODE */
 .hero-banner {
 display: flex;
 flex-direction: column;
 justify-content: center;
+font-family: "PlayfairDisplay", sans-serif;
 background: url("../images/banner-girl.png"), url("../images/flower-bkgd.jpg");
-    background-position-x: 0%, 0%;
-    background-position-y: 0%, 0%;
-    background-repeat: repeat, repeat;
-    background-size: auto, auto;
 background-repeat: no-repeat, no-repeat;
 background-position: bottom,center;
 background-size: 18vh,95vh,47vh,6vh;
 height: 61vh;
-}
-
-.hero-banner h3{
 text-align: center;
-font-size: 2.5em;
-color: white;
-font-family: "./fonts/PlayfairDisplay-Bold";
-text-shadow: 1.5px 3.5px 4.5px #8deb1d;
 }
 
-.hero-banner h1{
+.hero-banner h6 {
+font-size: 2.5em;
+color: #0fcfbd;
+text-shadow: 1.5px 3.5px 4.5px #1c1b19ad;
+}
+
+.hero-banner h1 {
     font-size: 2em; /* browser */
-    font-family: "Playfair Display", serif;
+    font-family: "PlayfairDisplay", serif;
     text-align: center;
     text-shadow: 2px 2px 4px grey;
+    color: white;
 }
 
-.nav-items li{
+.nav-items li {
     text-decoration-line: none;
 }
 
@@ -166,9 +227,8 @@ nav li a{
 }
 
 #about{
-    box-sizing: border-box;
-    font-family: 'PlayfairDisplay-Italic';
-    padding: 3em 1em;
+    padding: 1em 1em;
+    font-style: italic;
 }
 
 #about h2{
@@ -177,12 +237,8 @@ nav li a{
     margin-bottom: 1em;
 }
 
-#about h2 em{
-    
-}
-
 #about h2 strong{
-    font-family: 'PlayfairDisplay-Bold';
+    font-family: 'PlayfairDisplay-BoldItalic';
 }
 
 #about p{
@@ -297,15 +353,16 @@ strong{
     background-repeat: no-repeat;
 }
 
-.products{
-    font-weight: 900;
-    font-size: 30px;
-    border: 5px solid darkorange;
-    font-family: 'PlayfairDisplay-Italic';
-    font-style: italic;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 2rem 1.3rem;
+#products{
+font-size: 26px;
+border: 4px solid darkturquoise;
+font-family: 'PlayfairDisplay-Italic';
+font-style: italic;
+text-align: center;
+box-sizing: border-box;
+padding: 2rem 1.3rem;
+height: 21em;
+font-size: large;
 }
 
 .products h2{
@@ -321,9 +378,15 @@ strong{
 
 .products strong{
     font-family: 'Raleway-Light';
+    font-style: bold;
 }
 
-.updates{
+/* add to cart button */
+.carousel-cell button{
+    color: teal;
+}
+
+#updates{
     background-image: url("../images/wave-bkgd.jpg");
     background-size: cover;
     height: 45vh;
@@ -332,17 +395,22 @@ strong{
     text-align: center; 
 }
 
-.updates h2 em{
+.updates h2{}
+
+#first-part{
     font-family: 'PlayfairDisplay-BoldItalic';
-    font-style: italic;
+    /* You tell me why this ain't working none, no more. Ain't NAN working maine. */
 }
 
-.updates h2 strong{
+#second-part{
     font-family: 'PlayfairDisplay-Bold';
+    font-style: bold;
 }
 
 .flickity-button{
-    display:none;
+    /* display: none; */
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -364,6 +432,13 @@ strong{
 .icons{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.icons li{
+    width: 100%
+    background-color: blue;
 }
 
 footer{
@@ -408,6 +483,7 @@ footer{
 
 /* tablet view breakpoint at 600px and up */
 @media screen and (min-width: 600px) {
+
     body{
     	font-size: 16px;
         max-width: 1240px;
@@ -473,7 +549,77 @@ footer{
    
 /* Desktop Breakpoint */
 @media screen and (min-width: 1240px) {
-    background-color: gold;
+
+    body{
+        /*font-family: 'Raleway-Medium'; experiment*/
+        font-size: 16px;
+    }
+
+    .menu-container{
+    display: flex;
+    flex-wrap: nowrap;
+    }
+
+    .logo{
+    width: 13em;
+    height: 4.5em;
+    }
+
+    .cart{
+    width: 5em;
+    height: 14vh;
+    padding: 0px 20px;
+    order: 2;
+    }
+
+    .hero-banner{
+        font-family: 'Raleway-Medium'; /* July 17 */
+        text-align: center;
+        background-size: 60vh, contain;
+        height: 160vh; /* auto and inherit do not work */
+        background-position: bottom, bottom;
+        background-size: 50vh, contain, contain;
+    }
+
+    .hero-banner h6{
+    }
+
+    /* Spring/Summer 2016 */
+    .hero-banner h1{
+    margin-top: 0.5em;
+font-size: 0px;
+font-size: 5em;
+    }
+
+    nav-items li{
+        text-decoration-line: none;
+        padding: 0em 44px;
+        border: 10px double peachpuff;
+    }
+
+    /* The HEX code for the links is orange */
+    a:link,
+    a:visited {
+        color: #f98f06f2;
+    }
+
+    #updates {
+        height: 55vh;
+        /*background-image: url();*/
+    }
+
+    #about{
+        font-family: 'PlayfairDisplay-Italic';
+        padding: 3em 1em;
+        font-style: italic;
+    }
+
+    /* getting more specific */
+    #about h2 strong{
+        font-family: 'PlayfairDisplay-BoldItalic';
+        font-style: bold;
+    }
+
 }
 
 /* 

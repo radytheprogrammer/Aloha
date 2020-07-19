@@ -24,5 +24,7 @@ ehthumbs.db
 npm packages
 node_modules/
 
-# ignore started code zip folder
-aloha project1 font-family.zip
+# ignore downloaded zip files/practice code
+grid.html
+
+font-awesome-4.7.0

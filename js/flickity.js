@@ -4306,6 +4306,8 @@
             var child = children[i];
             this.addElementBackgroundImages( child );
           }
+
+          //children.forEach( element => this.addElementBackgroundImages(element) );
         }
       };
       
