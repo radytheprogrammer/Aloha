@@ -1,0 +1,172 @@
+<!--
+    Author: RadyD Project: Aloha - responsive web design
+    What did you learn from this? 
+    What were the learning objectives?
+-->
+
+<!DOCTYPE html> <!-- what is this for again?-->
+
+<html lang="en"> <!-- Didn't I just declare this? -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Aloha Project Website </title>
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+        <header class="menu">
+                <img id="logo" src="images/aloha-logo.svg" alt="Aloha Apparel Logo" />
+                <img id="cart" src="images/cart-icon.svg" alt="Shopping Cart" />
+                <nav class="menu__nav"> <!-- Block Element Modifier(B.E.M) Notation-->
+                    <ul class="menu__nav__list">
+                        <li> <a class="menu__nav__list__item" href="#about" >   ABOUT   </a> </li>
+                        <li> <a class="menu__nav__list__item" href="#shop">     SHOP    </a> </li>
+                        <li> <a class="menu__nav__list__item" href="#products"> FEATURED</a> </li>
+                        <li> <a class="menu__nav__list__item" href="#updates">  UPDATES </a> </li>
+                    </ul>
+                </nav>
+        </header>
+        
+        <main>
+
+            <section class='hero-banner'>
+                <h6>NEW COLLECTION</h6>
+                <h1>Spring/Summer 2016</h1>
+            </section>
+
+            <section id="about">
+                <h1 class="section-title">Hand-Crafted <span>Styles</span></h1>
+                <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
+            </section>
+
+            <section class="grid-container">
+                <div id="shop">
+                    <div class="mens"><span>    MEN's</span></div>
+                    <div class="trends"><span>  TRENDS</span></div>
+                    <div class="glasses"><span> GLASSES</span></div>
+                    <div class="sale"><span>    SALE</span></div>
+                    <div class="bags"><span>    BAGS</span></div>
+                    <div class="womens"><span>  WOMEN'S</span></div>
+                </div>
+            </section>
+
+            <!-- flickity carousel slider -->
+            <section class="carousel" data-flickity='{ "autoPlay": true }'>
+                <h1>Most-Loved<span>Products</span></h1>
+                    
+                    <figure class="carousel-cell">
+                        <img src="images/stretch-knit-dress.jpg" alt="Black Dress With White Polka Dots" />
+                        <p>DRESSES</p>
+                        <h3>Stretch Knit Dress</h3>
+                        <p>$169.00</p>
+                        <button>Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                    </figure>
+
+                    <figure class="carousel-cell">
+                        <img src="images/cotton-blue-shirt.jpg" alt="Blue Denim Cotton Shirt" />
+                        <p>SHIRTS</p>
+                        <h3>Cotton Blue Shirt</h3>
+                        <p>$89.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+
+                    <figure class="carousel-cell">
+                        <img src="images/checked-stretch-dress.jpg" alt="Red Dress With White Polka Dots" />
+                        <p>DRESSES</p>
+                        <h3>Checked Stretch Dress</h3>
+                        <p>$129.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+
+                    <figure class="carousel-cell">
+                        <img src="images/blue-hipster-backpack.jpg" alt="Blue Bag With Faded Red Leather Straps" />
+                        <p>BAGS</p>
+                        <h3>Blue Hipster Backpack</h3>
+                        <p>$69.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="images/blue-silk-dress.jpg" alt="Blue Silk Dress, Includes Belt" />
+                        <p>DRESSES</p>
+                        <h3>Blue Silk Dress</h3>
+                        <p>$89.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="images/cotton-yellow-tshirt.jpg" alt="Plain Yellow Cotton Shirt" />
+                        <p>SHIRTS</p>
+                        <h3>Yellow Cotton T-Shirt</h3>
+                        <p>$89.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="images/demin-overall-shorts.jpg" alt="Denim Overall Shorts" />
+                        <p>PANTS</p>
+                        <h3>Denim Overall Shorts</h3>
+                        <p>$89.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+                    <figure class="carousel-cell">
+                        <img src="images/pink-dotted-dress.jpg" alt="Pink Dress with Black Polka Dots" />
+                        <p>DRESSES</p>
+                        <h3>Pink Dotted Dress</h3>
+                        <p>$89.00</p>
+                        <button>Add to Cart</button>
+                    </figure>
+              
+            </section>
+
+            <section id="updates">
+                    <h1>Sign-up for<span>Updates</span></h1>
+                    <p>Stay updated on our latest...</p>
+                    <form>
+                        <input id="email" type="email" placeholder="Your Email">
+                        <input id="subscribe" type="submit" value="Subscribe">
+                    </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="address">
+                    <p>
+                        &copy; 2016 Aloha Apparel Co.
+                        Powered by HTML and CSS.
+                    </p>
+
+                    <p>
+                        604-604-6040. info&copy;alohaapparel.com
+                    </p>
+    
+                    <p>
+                        1490 W Broadway
+                        Vancouver, BC, Canada
+                    </p>
+            </div>
+            <ul class="icons">
+                <li><i class="fab fa-facebook-f" href="https://facebook.com/"></i>facebook</li>
+                <li><i class="fab fa-twitter" href="https://twitter.com/"></i>twitter</li>
+                <li><i class="fab fa-instagram" href="https://www.instagram.com/"></i>instagram</li>
+                <li><i class="fab fa-pinterest" href="https://www.pinterest.com/"></i>pinterest</li>
+                <li><i class="fab fa-google-plus-g" href="https://www.google.com/"></i>google+</li>
+            </ul>
+        </footer>
+        <!-- email validation-->
+        <!-- <script src="js/main.js"></script> -->
+        <!-- slider -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- icons -->
+        <script src="https://kit.fontawesome.com/1506eb6f78.js" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
+
+<!--
+    Notes:
+        - to add whitespace, use &nbsp;
+        - icons include them
+        -
+-->
