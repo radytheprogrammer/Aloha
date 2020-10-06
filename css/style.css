@@ -1,0 +1,718 @@
+@font-face {
+    font-family: 'RalewayLight';
+    src: url('../fonts/Raleway-Light.eot');
+    src: url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Light.woff2') format('woff2'),
+        url('../fonts/Raleway-Light.woff') format('woff'),
+        url('../fonts/Raleway-Light.ttf') format('truetype'),
+        url('../fonts/Raleway-Light.svg#Raleway-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RalewayMedium';
+    src: url('../fonts/Raleway-Medium.eot');
+    src: url('../fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../fonts/Raleway-Medium.woff') format('woff'),
+        url('../fonts/Raleway-Medium.ttf') format('truetype'),
+        url('../fonts/Raleway-Medium.svg#Raleway-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RalewayLightItalic';
+    src: url('../fonts/Raleway-LightItalic.eot');
+    src: url('../fonts/Raleway-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-LightItalic.woff2') format('woff2'),
+        url('../fonts/Raleway-LightItalic.woff') format('woff'),
+        url('../fonts/Raleway-LightItalic.ttf') format('truetype'),
+        url('../fonts/Raleway-LightItalic.svg#Raleway-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RalewayMediumItalic';
+    src: url('../fonts/Raleway-MediumItalic.eot');
+    src: url('../fonts/Raleway-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Raleway-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Raleway-MediumItalic.woff') format('woff'),
+        url('../fonts/Raleway-MediumItalic.ttf') format('truetype'),
+        url('../fonts/Raleway-MediumItalic.svg#Raleway-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* HEADINGS FONT FAMILY IS PLAYFAIR DISPLAY */
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../fonts/PlayfairDisplay-Regular.eot');
+    src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplayBold';
+    src: url('../fonts/PlayfairDisplay-Bold.eot');
+    src: url('../fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Bold.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplayBoldItalic';
+    src: url('../fonts/PlayfairDisplay-BoldItalic.eot');
+    src: url('../fonts/PlayfairDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-BoldItalic.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-BoldItalic.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-BoldItalic.svg#PlayfairDisplay-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplayItalic';
+    src: url('../fonts/PlayfairDisplay-Italic.eot');
+    src: url('../fonts/PlayfairDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Italic.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Italic.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Italic.svg#PlayfairDisplay-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    font-size: 14px; /* mobile base font size is 14px as per requirements*/
+    margin: 0 auto;
+    font-family: 'RalewayLight'; /* Specs: The body font family is Raleway Light */
+    background-color: white;
+    font: #2d2d2d;
+}
+
+h1{
+    font-family: 'PlayfairDisplayItalic';
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+h1 span{
+    font-family: 'PlayfairDisplayBold';
+}
+
+h6{
+    font-family: "PlayfairDisplay", sans-serif;
+}
+
+.section-title{
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    width: 100%;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 10em;
+    height: auto;
+    padding: 1em;
+}
+
+.cart {
+    width: 3em;
+    height: 3em;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    font-size: 14px;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 0px 10px;
+}
+
+a:link {
+    color: lightgreen;
+}
+
+a:visited {
+    color: #e2574c;
+}
+
+.nav-items {
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Raleway-Light', sans-serif;
+        border-style: solid;
+        border-top-color: #8080807a;
+        border-top-width: 0.2em;
+        padding: 10px;
+        font-weight: inherit;
+}
+
+.nav-items li {
+    text-decoration-line: none;
+    padding: 0px 15px;
+}
+
+.cart-container {
+    display: flex;
+    width: 55px;
+    height: 55px;
+    margin-right: 0px;
+    margin-top: 0px;
+    order: 3;
+}
+
+.horizontal-line {
+    height: 15px;
+    order: 4;
+}
+
+
+/* MOBILE FIRST APPROACH */
+.hero-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url("../images/banner-girl.png"), url("../images/flower-bkgd.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: bottom, center;
+    background-size: 20em, 20em;
+    /* height: 61vh; */
+    text-align: center;
+}
+
+.hero-banner h6 {
+    font-size: 2.5em;
+    color: #0fcfbd;
+    text-shadow: 1.5px 3.5px 4.5px #1c1b19ad;
+}
+
+.hero-banner h1 {
+    font-size: 2em; /* browser */
+    font-family: "PlayfairDisplay", serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px grey;
+    color: white;
+}
+
+.nav-items li {
+    text-decoration-line: none;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #e2574c;
+}
+
+#about{
+    padding: 1em 1em;
+    font-style: italic;
+}
+
+#about h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+#about h2 strong{
+    font-family: 'PlayfairDisplay-BoldItalic';
+}
+
+#about p{
+    text-align: center;
+    font-family: 'Raleway-Light';
+    line-height: 2.0em;
+}
+
+#shop :visited{
+    color: aqua;
+}
+
+#shop{
+    display:grid;
+    grid-template-columns:  repeat(2,49vw);
+    grid-template-rows:     repeat(4,49vw);
+    column-gap:2vw;
+    row-gap:2vw;
+    width: 100%;
+}
+
+.mens{
+    grid-column: 1/ span 2; /*shorthand version*/
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/mens-category.jpg");
+    background-size: 100%;
+    width:100%;
+    height:100%;
+
+    background-repeat: no-repeat;
+}
+
+.trends{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/trends-category.jpg");
+    background-size: cover;
+    width:100%;
+    height: 100%;
+}
+
+.glasses{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/glasses-category.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.sale{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/sale-category.jpg");
+    background-size: 100%;
+    height:100%;
+    width:100%;
+}
+
+.bags{
+    grid-column: 2/ span 1;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    background: url("../images/bags-category.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+}
+
+.womens{
+    grid-column: 1 / span 2;
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/womens-category.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* FLICKITY IMAGE SLIDER SECTION */
+#products{
+font-size: 1.5rem;
+font-family: 'PlayfairDisplay-Italic';
+}
+
+/* > means immediate children */
+.carousel-cell>img{
+    width: auto;
+    height: 15em;
+}
+
+.products strong{
+    font-family: 'Raleway-Light';
+    font-style: bold;
+}
+
+/* section Sign-up for Updates */
+#updates{
+    background-image: url("../images/wave-bkgd.jpg");
+    background-size: cover;
+    height: 45vh;
+    font-size: xx-large;
+    background-repeat: no-repeat;
+    text-align: center; 
+}
+
+#first-part{
+    font-family: 'PlayfairDisplay-BoldItalic';
+    /* You tell me why this ain't working none, no more. Ain't NAN working maine. */
+}
+
+#second-part{
+    font-family: 'PlayfairDisplay-Bold';
+    font-style: bold;
+}
+
+.flickity-button{
+    /* display: none; */
+    width: 100px;
+    height: 100px;
+}
+
+
+.notif{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #e2574c;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    right: -35px;
+    top: -65px;
+}
+
+/* FOOTER SECTION MOBILE VIEW */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Raleway-Light';
+    background-color: #242424;
+    text-align: left;
+}
+
+.address{
+    color: #ffffff;
+    line-height: 3em;
+    font-weight: bold;
+    margin: 0px 0px 10px 10px;
+    padding: 0px 5px;
+}
+
+.icons{
+	line-height: 1.5em;
+	min-width: 5rem;
+	width: min-content;
+}
+
+.icons li i{
+    padding-right: 5px;
+}
+
+.icons :hover{
+    font-size: larger;
+    color: darkgoldenrod;
+    cursor: pointer;
+}
+
+
+/* TABLET BREAKPOINT at 600px and up to the next breakpoint */
+@media screen and (min-width: 600px) {
+
+    body{
+    	font-size: 16px;
+		grid-column-gap: 0.5em;
+  		grid-row-gap: 0.5em;
+    }
+
+    /* MENS */
+    .d1 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2; /* start from top and span 2 rows */
+      
+        background: url('../images/mens-category.jpg');
+        background-size: 100%;
+    }
+
+    /* TRENDS */
+    .d2 {
+       
+        grid-column: 2/3; /* last col */
+        grid-row: 2/2;
+        background-size: 100%;
+    }
+
+    /* GLASSES */
+    .d3{
+           
+            grid-column: 3/end;
+            grid-row: 0/0;
+            background-size: 100%;
+    }
+    /* SALE */
+    .d4 {
+           
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-size: 100%;
+    }
+    /* BAGS */
+    .d5{
+      
+        grid-column: 3/4;
+        grid-row: 2/3;
+        background-size: 100%;
+
+    }
+    /* WOMEN's */
+    .d6{
+        grid-column: 2/4;
+
+        background-size: 100%;
+    }
+
+    .carousel-cell {
+        width: 25%; /* half-width */
+        height: 50px;
+        margin-right: 10px;
+    }
+}
+   
+/* DESTOP BREAKPOINT 1400px. 
+Question: What is the width of the client? How will I know how the client will see the page?
+    Answer: the width changes depending on the user's system configuration or screen size
+    That is why we work with relative units like em, rem and %.
+*/
+@media screen and (min-width: 1240px) {
+
+    body{
+        /* 
+            font is inherited from the mobile-first code above 
+            do not have to re-define and code is less repetative
+        */
+        font-size: 16px; /* default font-size for desktop is 16px */
+        background: white;
+    }
+    /* HEADER - background image overlap problem */
+    header{
+        position: relative; /* what does this do? */
+        /* relative to whot? */
+        width: 100%;
+    }
+
+    /* Note: Menu looks different than mobile view. Appears in-line */
+    .menu{
+        display: flex; 
+        justify-content: space-evenly;
+    }
+
+    .menu__nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+    }
+
+    .menu__nav__list{
+        display: flex;
+        justify-content: center;
+        font-size: 1.4em;
+        font-weight: bolder;
+    }
+
+    
+        #logo {
+            width: 13%;
+            height: 4.5em;
+            padding: 10px 10px;
+            margin-left: 1em;
+            margin: 1em 1em;
+        }
+    
+
+    /* Is this a Flex item? */
+    #cart{
+        height: 4.5em;
+        padding: 10px 10px;
+        margin-left: 1em;
+        margin: 1em 1em;
+        order: 3;
+    }
+
+    nav{
+        background-color: white;
+        font-size: 14px;
+        width: 100%;
+        font-size: larger;
+    }
+
+    nav li{
+        color: #e2574c;
+    }
+
+    .nav-items{
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Raleway-Light', sans-serif;
+        border-style: solid;
+        border-top-color: #8080807a;
+        border-top-width: 0.2em;
+        padding: 10px;
+        font-weight: inherit;
+        color: #e2574c;
+    }
+
+
+    /* pattern: same height as the #categories and #shop categories */
+    .hero-banner {
+        background-repeat: no-repeat, repeat-x;
+        background-position: bottom, center;
+        background-size: contain, contain;
+        height: 60vh;
+    }
+
+    /* Spring/Summer 2016 */
+    .hero-banner h1{
+        margin-top: 0.5em;
+        font-size: 0px;
+        font-size: 5em;
+    }
+
+    nav-items li{
+        text-decoration-line: none;
+        padding: 0em 44px;
+        border: 10px double peachpuff;
+    }
+
+    /* The HEX code for the links is orange */
+    a:link,
+    a:visited {
+        color: #f98f06f2;
+    }
+
+    #shop{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* one flexible unit, fractional unit. */
+        grid-template-rows: repeat(2, 2fr);
+        height: 60vh;
+    }
+
+    .mens{
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    .trends{
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+    
+    .glasses{
+        grid-column: 4/5;
+        grid-row: 1;
+    }
+    
+    .sale{
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+    
+    .bags{
+        grid-column: 2/3;
+        grid-row: 2;
+    }
+    
+    .womens{
+        grid-column: 3/5;
+        grid-row: 2;
+    }
+
+    #products {
+        height: 10vh;
+    }
+
+    .carousel{
+        height: 15em;
+    }
+    /* Flickity code from flickity.css */
+    .carousel-cell {
+        width: 66%;
+        height: 200px;
+        margin-right: 10px;
+        background: #FFF;
+        border-radius: 5px;
+        counter-increment: carousel-cell;
+        /* counter-increment: gallery-cell; */
+    }
+
+    .flickity-viewport{
+        height: 15em;
+    }
+
+    #updates {
+        height: 55vh;
+        /*background-image: url();*/
+    }
+
+    #about{
+        font-family: 'PlayfairDisplay-Italic';
+        padding: 3em 1em;
+        font-style: italic;
+    }
+
+    /* getting more specific */
+    #about h2 strong{
+        font-family: 'PlayfairDisplay-BoldItalic';
+        font-style: bold;
+    }
+
+    footer{
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-between; */
+        color: white;
+        background-color: rgb(36, 36, 36);
+        text-align: center;
+    }
+
+    .address{
+        align-items: flex-start;
+    }
+
+    .address :nth-last-child(1){
+        color: grey;
+    }
+
+    .icons{
+        width: auto;
+        text-align: initial;
+        padding: 2em 2em;
+        margin: 3em 3em;
+    }
+
+}
